@@ -132,3 +132,47 @@ test('the multiply function should take "hello" and 22 and return NaN', function
     // Make assertions about what is expected versus the actual result
     expect.deepEqual(actual, expected);
 });
+
+//divide() function tests.
+
+test('the divide function should take 27 and 9 and return 3', function(expect) {
+    //Arrange
+    // Set up your parameters and expectations
+    const expected = 3;
+    
+    //Act 
+    // Call the function you're testing and set the result to a const
+    const actual = divide(27, 9);
+
+    //Expect
+    // Make assertions about what is expected versus the actual result
+    expect.equal(actual, expected);
+});
+
+test('the divide function should take 100 and 10 and return 10', function(expect) {
+    //Arrange
+    // Set up your parameters and expectations
+    const expected = 10;
+    
+    //Act 
+    // Call the function you're testing and set the result to a const
+    const actual = divide(100, 10);
+
+    //Expect
+    // Make assertions about what is expected versus the actual result
+    expect.equal(actual, expected);
+});
+
+test('the divide function should take "hello" and 22 and return NaN', function(expect) {
+    //Arrange
+    // Set up your parameters and expectations
+    const expected = NaN;
+    
+    //Act 
+    // Call the function you're testing and set the result to a const
+    const actual = divide('hello', 22);
+
+    //Expect
+    // Make assertions about what is expected versus the actual result
+    expect.deepEqual(actual, expected);
+});
