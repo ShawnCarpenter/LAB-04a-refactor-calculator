@@ -1,4 +1,4 @@
-import { add, subtract, multiply, divide } from './mathUtils.js';
+import { add, subtract, multiply, divide, getNumber } from './mathUtils.js';
 
 const addButton = document.getElementById('addButton');
 const subtractButton = document.getElementById('subtractButton');
@@ -7,10 +7,8 @@ const divideButton = document.getElementById('divideButton');
 const equalsButton = document.getElementById('equalsButton');
 
 addButton.addEventListener('click', () => {
-    const addOne = document.getElementById('addOne');
-    const addTwo = document.getElementById('addTwo');
-    const numberOne = Number(addOne.value);
-    const numberTwo = Number(addTwo.value);
+    const numberOne = getNumber('addOne');
+    const numberTwo = getNumber('addTwo');
     const answer = add(numberOne, numberTwo);
     document.getElementById('sum').textContent = answer;
 
@@ -18,20 +16,16 @@ addButton.addEventListener('click', () => {
 
 
 subtractButton.addEventListener('click', () => {
-    const subtractOne = document.getElementById('subtractOne');
-    const subtractTwo = document.getElementById('subtractTwo');
-    const numberOne = subtractOne.value;
-    const numberTwo = subtractTwo.value;
+    const numberOne = getNumber('subtractOne');
+    const numberTwo = getNumber('subtractTwo');
     const answer = subtract(numberOne, numberTwo);
     document.getElementById('result').textContent = answer;
 
 });
 
 multiplyButton.addEventListener('click', () => {
-    const multiplyOne = document.getElementById('multiplyOne');
-    const multiplyTwo = document.getElementById('multiplyTwo');
-    const numberOne = multiplyOne.value;
-    const numberTwo = multiplyTwo.value;
+    const numberOne = getNumber('multiplyOne');
+    const numberTwo = getNumber('multiplyTwo');
     const answer = multiply(numberOne, numberTwo);
     document.getElementById('product').textContent = answer;
 
