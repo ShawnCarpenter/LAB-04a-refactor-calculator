@@ -1,3 +1,5 @@
+import { add } from './mathUtils.js';
+
 const addButton = document.getElementById('addButton');
 const subtractButton = document.getElementById('subtractButton');
 const multiplyButton = document.getElementById('multiplyButton');
@@ -9,7 +11,7 @@ addButton.addEventListener('click', () => {
     const addTwo = document.getElementById('addTwo');
     const numberOne = Number(addOne.value);
     const numberTwo = Number(addTwo.value);
-    const answer = numberOne + numberTwo;
+    const answer = add(numberOne, numberTwo);
     document.getElementById('sum').textContent = answer;
 
 });
