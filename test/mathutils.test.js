@@ -88,3 +88,47 @@ test('the subtract function should take "hello" and 22 and return NaN', function
     // Make assertions about what is expected versus the actual result
     expect.deepEqual(actual, expected);
 });
+
+//multiply() function tests.
+
+test('the multiply function should take  and 9 and return 27', function(expect) {
+    //Arrange
+    // Set up your parameters and expectations
+    const expected = 27;
+    
+    //Act 
+    // Call the function you're testing and set the result to a const
+    const actual = multiply(3, 9);
+
+    //Expect
+    // Make assertions about what is expected versus the actual result
+    expect.equal(actual, expected);
+});
+
+test('the multiply function should take 0 and 10 and return 0', function(expect) {
+    //Arrange
+    // Set up your parameters and expectations
+    const expected = 0;
+    
+    //Act 
+    // Call the function you're testing and set the result to a const
+    const actual = multiply(0, 10);
+
+    //Expect
+    // Make assertions about what is expected versus the actual result
+    expect.equal(actual, expected);
+});
+
+test('the multiply function should take "hello" and 22 and return NaN', function(expect) {
+    //Arrange
+    // Set up your parameters and expectations
+    const expected = NaN;
+    
+    //Act 
+    // Call the function you're testing and set the result to a const
+    const actual = multiply('hello', 22);
+
+    //Expect
+    // Make assertions about what is expected versus the actual result
+    expect.deepEqual(actual, expected);
+});

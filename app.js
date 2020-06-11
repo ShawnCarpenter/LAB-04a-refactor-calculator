@@ -1,4 +1,4 @@
-import { add } from './mathUtils.js';
+import { add, subtract, multiply, divide } from './mathUtils.js';
 
 const addButton = document.getElementById('addButton');
 const subtractButton = document.getElementById('subtractButton');
@@ -20,32 +20,30 @@ addButton.addEventListener('click', () => {
 subtractButton.addEventListener('click', () => {
     const subtractOne = document.getElementById('subtractOne');
     const subtractTwo = document.getElementById('subtractTwo');
-    const numberOne = Number(subtractOne.value);
-    const numberTwo = Number(subtractTwo.value);
-    const answer = numberOne - numberTwo;
+    const numberOne = subtractOne.value;
+    const numberTwo = subtractTwo.value;
+    const answer = subtract(numberOne, numberTwo);
     document.getElementById('result').textContent = answer;
 
 });
 
+multiplyButton.addEventListener('click', () => {
+    const multiplyOne = document.getElementById('multiplyOne');
+    const multiplyTwo = document.getElementById('multiplyTwo');
+    const numberOne = multiplyOne.value;
+    const numberTwo = multiplyTwo.value;
+    const answer = multiply(numberOne, numberTwo);
+    document.getElementById('product').textContent = answer;
+
+});
 
 divideButton.addEventListener('click', () => {
     const divideOne = document.getElementById('divideOne');
     const divideTwo = document.getElementById('divideTwo');
-    const numberOne = Number(divideOne.value);
-    const numberTwo = Number(divideTwo.value);
-    const answer = numberOne / numberTwo;
+    const numberOne = divideOne.value;
+    const numberTwo = divideTwo.value;
+    const answer = divide(numberOne, numberTwo);
     document.getElementById('quotient').textContent = answer;
-
-});
-
-
-multiplyButton.addEventListener('click', () => {
-    const multiplyOne = document.getElementById('multiplyOne');
-    const multiplyTwo = document.getElementById('multiplyTwo');
-    const numberOne = Number(multiplyOne.value);
-    const numberTwo = Number(multiplyTwo.value);
-    const answer = numberOne * numberTwo;
-    document.getElementById('product').textContent = answer;
 
 });
 
